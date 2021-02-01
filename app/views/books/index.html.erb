@@ -1,11 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="m-2">Mi Biblioteca</h1>
+<br>
+<div class="container">
 
-<table class="table table-stripped">
+<%= search_form_for @q do |f| %>
+  <%= f.label :status, "Estado del Libro" %>
+  <%= f.select :status, options_for_select(Book.statuses, @q.status),{},{class: "form-control"} %>
+  <%= f.submit "Filtrar", class: "btn btn-outline-dark"%>
+<% end %>
+
+
+</div>
+
+<table class="table table-stripped mt-3">
   <thead class="table-light">
     <tr>
-      <th>Título</th>
+      <th><%= sort_link(@q, :title, 'Título') %></th>
       <th>Autor</th>
       <th>Estado</th>
       <th>Solicitante</th>

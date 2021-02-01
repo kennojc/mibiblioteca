@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  status: 1
+  borrower: MyString
+  borrowed: 2021-02-01
+  returned: 2021-02-01
+
+two:
+  title: MyString
+  author: MyString
+  status: 1
+  borrower: MyString
+  borrowed: 2021-02-01
+  returned: 2021-02-01
